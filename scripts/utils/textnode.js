@@ -1,7 +1,7 @@
 import { selectOption, showOption } from "./options.js";
 import { textNodes, state, textElement, optionButtonsElement } from '../constants.js';
 
-export function showTextNode(textNodeIndex) {
+export function showTextNode(textNodeIndex = 1) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
     textElement[0].innerText = textNode.text;
 

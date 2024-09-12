@@ -1,3 +1,4 @@
+import { startGame } from "./game.js";
 
 export function showOption(option, state) {
     return option.requiredState == null || option.requiredState(state)

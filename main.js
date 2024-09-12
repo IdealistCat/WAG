@@ -1,4 +1,4 @@
-import { showTextNode } from "./scripts/utils/textnode.js";
+import { startGame } from "./scripts/utils/game.js"
 
 const textElement = document.getElementsByClassName('text')
 const optionButtonsElement = document.getElementById('option-buttons')
@@ -7,11 +7,6 @@ let state = {}
 
 const textNodes = [
 ]
-
-function startGame() {
-  state = {}
-  showTextNode(1, textNodes, state, textElement, optionButtonsElement);
-}
 
 /* addTextNode(
     {
@@ -26,4 +21,4 @@ function startGame() {
     }
 ); */
 
-startGame();
+startGame(textNodes, state, textElement, optionButtonsElement);

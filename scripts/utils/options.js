@@ -15,5 +15,6 @@ export function showOption(option) {
     }
 
     state = Object.assign(state, option.setState);
+
     showTextNode(nextTextNodeId);
   }

@@ -22,4 +22,15 @@ export function showTextNode(textNodeIndex = 1) {
         optionButtonsElement.appendChild(button);
       }
     })
+
+    var sL = (textNode.storyLength == 'x') ? 100 : textNode.storyLength;
+
+    var progressBar = document.getElementById('progressbar');
+    progressBar.value = textNode.storyIndex / sL * 100;
+
+    sL = (textNode.storyLength == 'x') ? '?' : textNode.storyLength;
+
+    var progressBarTxt = document.getElementById('progress');
+    progressBarTxt.innerHTML = `${textNode.storyIndex}/${sL}`;
+
   }

@@ -10,7 +10,7 @@ export function showTextNode(textNodeIndex = 1) {
     }
   
     textNode.options.forEach(option => {
-      if (showOption(option)) {
+      if (showOption(option, option.requiredState)) {
         // document.body.style = `background-image: url(${(option.image.length > 0) ? "/"+option : ""});`;
 
         const button = document.createElement('button');
@@ -19,18 +19,21 @@ export function showTextNode(textNodeIndex = 1) {
 
         button.addEventListener('click', () => selectOption(option));
 
+        if (option.button_modifier != null)
+          button.style = `background-color: ${option.button_modifier.color}; border-color: ${option.button_modifier.bordercolor};`;
+
         optionButtonsElement.appendChild(button);
       }
     })
 
-    var sL = (textNode.storyLength == 'x') ? 100 : textNode.storyLength;
+    var sL = (textNode.storyLength == 'a') ? 100 : textNode.storyLength;
 
     var progressBar = document.getElementById('progressbar');
-    progressBar.value = textNode.storyIndex / sL * 100;
+    progressBar.value = (textNode.storyLength == 'b') ? Math.random * 1000 : textNode.storyIndex / sL * 100;
 
-    sL = (textNode.storyLength == 'x') ? '?' : textNode.storyLength;
+    sL = (textNode.storyLength == 'a') ? '?' : textNode.storyLength;
 
     var progressBarTxt = document.getElementById('progress');
-    progressBarTxt.innerHTML = `${textNode.storyIndex}/${sL}`;
+    progressBarTxt.innerHTML = `${(textNode.storyIndex == 'a') ? '?' : textNode.storyIndex}/${sL}`;
 
   }

@@ -17,3 +17,10 @@ export function showTextNode(textNodeIndex, textNodes, state, textElement, optio
       }
     })
   }
+
+export function addTextNode(textNodes = [{}], newTextNode = {}) {
+  var textNodeModif = textNodes;
+  textNodeModif.push(newTextNode);
+
+  return textNodeModif;
+}

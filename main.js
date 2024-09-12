@@ -1,12 +1,11 @@
 import { startGame } from "./scripts/utils/game.js"
+import { VERSION } from "./scripts/constants.js";
 
-const textElement = document.getElementsByClassName('text')
-const optionButtonsElement = document.getElementById('option-buttons')
+const textElement = document.getElementsByClassName('text');
+const optionButtonsElement = document.getElementById('option-buttons');
 
-let state = {}
-
-const textNodes = [
-]
+let state = {};
+const textNodes = [];
 
 /* addTextNode(
     {

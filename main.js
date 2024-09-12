@@ -12,10 +12,21 @@ const textNodes = [
     options: [
       {
         text: 'say Hello',
+        nextText: 2
+      }
+    ]
+  },
+  {
+    id: 2,
+    text: 'you say hello, just like in the movies, games, shows, and others, but no one answered.',
+    image: 'assets/forest.png',
+    options: [
+      {
+        text: 'say Hello',
         nextText: -1
       }
     ]
-  }
+  },
 ];
 
 /* addTextNode(

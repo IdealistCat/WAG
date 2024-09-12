@@ -1,7 +1,6 @@
 export var textElement = document.getElementsByClassName('text');
 export var optionButtonsElement = document.getElementById('option-buttons');
 
-export let state = {};
 export const textNodes = [
   {
     id: 1,

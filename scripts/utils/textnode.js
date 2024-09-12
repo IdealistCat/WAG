@@ -1,5 +1,5 @@
 import { selectOption, showOption } from "./options.js";
-import { textNodes, state, textElement, optionButtonsElement } from '../constants.js';
+import { textNodes, textElement, optionButtonsElement } from '../constants.js';
 
 export function showTextNode(textNodeIndex = 1) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
@@ -10,14 +10,14 @@ export function showTextNode(textNodeIndex = 1) {
     }
   
     textNode.options.forEach(option => {
-      if (showOption(option, state)) {
+      if (showOption(option)) {
         // document.body.style = `background-image: url(${(option.image.length > 0) ? "/"+option : ""});`;
 
         const button = document.createElement('button');
         button.innerText = option.text;
         button.classList.add('btn');
 
-        button.addEventListener('click', () => selectOption(option, state));
+        button.addEventListener('click', () => selectOption(option));
 
         optionButtonsElement.appendChild(button);
       }

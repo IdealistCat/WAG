@@ -1,8 +1,9 @@
 import { selectOption, showOption } from "./options.js";
+import { textNodes, state, textElement, optionButtonsElement } from '../constants.js';
 
-export function showTextNode(textNodeIndex, textNodes, state, textElement, optionButtonsElement) {
+export function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-    textElement.innerText = textNode.text;
+    textElement[0].innerText = textNode.text;
 
     while (optionButtonsElement.firstChild) {
       optionButtonsElement.removeChild(optionButtonsElement.firstChild);

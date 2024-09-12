@@ -1,6 +1,6 @@
 import { showTextNode } from "./textnode.js";
 
-export function startGame(textNodes, state, textElement, optionButtonsElement) {
+export function startGame() {
     state = {};
-    showTextNode(1, textNodes, state, textElement, optionButtonsElement);
+    showTextNode(1);
 }

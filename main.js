@@ -1,11 +1,22 @@
 import { startGame } from "./scripts/utils/game.js";
-import { addTextNode } from "./scripts/utils/textnode.js";
 
 const textElement = document.getElementsByClassName('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
 let state = {};
-const textNodes = [];
+const textNodes = [
+  {
+    id: 1,
+    text: 'you wake up in unknown lands, you are in a seemingly endless forest, and have no clue of what previously happened.',
+    image: 'assets/forest.png',
+    options: [
+      {
+        text: 'say Hello',
+        nextText: -1
+      }
+    ]
+  }
+];
 
 /* addTextNode(
     {
@@ -19,16 +30,5 @@ const textNodes = [];
         ]
     }
 ); */
-
-textNodes = addTextNode(textNodes, {
-  id: 1,
-  text: 'you wake up in unknown lands, you are in a seemingly endless forest, and have no clue of what previously happened.',
-  options: [
-    {
-      text: '"Hello?"',
-      nextText: -1
-    }
-  ]
-})
 
 startGame(textNodes, state, textElement, optionButtonsElement);

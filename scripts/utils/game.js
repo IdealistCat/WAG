@@ -1,4 +1,4 @@
-import { showTextNode } from "./textnode";
+import { showTextNode } from "./textnode.js";
 
 export function startGame(textNodes, state, textElement, optionButtonsElement) {
     state = {}

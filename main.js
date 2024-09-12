@@ -1,14 +1,14 @@
 import { startGame } from "./scripts/utils/game.js";
 
-const textElement = document.getElementsByClassName('text');
-const optionButtonsElement = document.getElementById('option-buttons');
+var textElement = document.getElementsByClassName('text');
+var optionButtonsElement = document.getElementById('option-buttons');
 
 let state = {};
 const textNodes = [
   {
     id: 1,
     text: 'you wake up in unknown lands, you are in a seemingly endless forest, and have no clue of what previously happened.',
-    image: 'assets/forest.png',
+    
     options: [
       {
         text: 'say Hello',
@@ -19,7 +19,6 @@ const textNodes = [
   {
     id: 2,
     text: 'you say hello, just like in the movies, games, shows, and others, but no one answered.',
-    image: 'assets/forest.png',
     options: [
       {
         text: 'say Hello',
@@ -42,4 +41,4 @@ const textNodes = [
     }
 ); */
 
-startGame(textNodes, state, textElement, optionButtonsElement);
+startGame(textNodes, state, textElement[0], optionButtonsElement);

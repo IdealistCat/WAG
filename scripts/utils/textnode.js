@@ -10,6 +10,8 @@ export function showTextNode(textNodeIndex, textNodes, state, textElement, optio
   
     textNode.options.forEach(option => {
       if (showOption(option, state)) {
+        // document.body.style = `background-image: url(${(option.image.length > 0) ? "/"+option : ""});`;
+
         const button = document.createElement('button');
         button.innerText = option.text;
         button.classList.add('btn');
@@ -19,6 +21,4 @@ export function showTextNode(textNodeIndex, textNodes, state, textElement, optio
         optionButtonsElement.appendChild(button);
       }
     })
-
-    document.body.style = `background-image: url(${(option.image.length > 0) ? "/"+option : ""});`;
   }

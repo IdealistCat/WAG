@@ -1,14 +1,17 @@
 import { startGame } from "./game.js";
+import { showTextNode } from "./textnode.js";
 
 export function showOption(option, state) {
-    return option.requiredState == null || option.requiredState(state)
+    return option.requiredState == null || option.requiredState(state);
   }
   
   export function selectOption(option, state) {
-   const nextTextNodeId = option.nextText
+   var nextTextNodeId = option.nextText;
+
     if (nextTextNodeId <= 0) {
-      return startGame()
+      return startGame();
     }
-    state = Object.assign(state, option.setState)
-    showTextNode(nextTextNodeId)
+
+    state = Object.assign(state, option.setState);
+    showTextNode(nextTextNodeId);
   }

@@ -21,11 +21,11 @@ const textNodes = [
     text: 'you say hello, just like in the movies, games, shows, and others, but no one answered.',
     options: [
       {
-        text: 'say Hello',
+        text: 'reset',
         nextText: -1
       }
     ]
-  },
+  }
 ];
 
 /* addTextNode(

@@ -1,6 +1,6 @@
 import { showTextNode } from "./scripts/utils/textnode.js";
 
-const textElement = document.getElementById('text')
+const textElement = document.getElementsByClassName('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}

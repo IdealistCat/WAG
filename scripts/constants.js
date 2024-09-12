@@ -44,13 +44,42 @@ export const textNodes = [
   },
   {
     id: 4,
-    text: 'You stumble to the floor after trying to run.',
+    text: 'You stumble to the floor after trying to run. again.',
     storyLength: 3,
-    storyIndex: 3,
+    storyIndex: 4,
     options: [
       {
         text: 'stop trying',
+        nextText: 5
+      },
+      {
+        text: 'run',
+        nextText: 6
+      }
+    ]
+  },
+  {
+    id: 5,
+    text: 'You stumble to the floor after trying to run.',
+    storyLength: 4,
+    storyIndex: 4,
+    options: [
+      {
+        text: 'RESET',
         nextText: -1
+      }
+    ]
+  },
+
+  {
+    id: 6,
+    text: 'You decided to continue running instead of accepting your fate. And instead of falling you have found civilization.',
+    storyLength: 4,
+    storyIndex: 4,
+    options: [
+      {
+        text: 'Head towards the city',
+        nextText: 7
       }
     ]
   }

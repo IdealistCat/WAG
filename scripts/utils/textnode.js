@@ -19,8 +19,24 @@ export function showTextNode(textNodeIndex = 1) {
 
         button.addEventListener('click', () => selectOption(option));
 
-        if (option.button_modifier != null)
-          button.style = `background-color: ${option.button_modifier.color}; border-color: ${option.button_modifier.bordercolor};`;
+        if (option.color != null) {
+          button.style = `background-color:#0af; border-color:#069;`;
+
+          // #abc 
+          if (option.color == 'red') button.style = `background-color:#f00; border-color:#900;`;
+          if (option.color == 'yellow') button.style = `color:#000; background-color:#ff0; border-color:#990;`;
+          if (option.color == 'green') button.style = `background-color:#0f0; border-color:#090;`;
+          if (option.color == 'cyan') button.style = `background-color:#0ff; border-color:#099;`;
+          if (option.color == 'blue') button.style = `background-color:#00f; border-color:#009;`;
+          if (option.color == 'pink') button.style = `background-color:#f0f; border-color:#909;`;
+
+          // #abcdef
+
+          // special
+          if (option.color.startsWith('#'))
+            button.style = `color: ${(option.textcolor != null) ? option.textcolor : '#000'}; background-color: ${option.color}; border-color: ${(option.bordercolor != null) ? option.bordercolor : '#000'};`
+
+        }
 
         optionButtonsElement.appendChild(button);
       }

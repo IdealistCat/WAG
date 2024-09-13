@@ -1,27 +1,38 @@
 import { state } from "./utils/options.js";
 
 // behind the scenes
-export var VERSION = {
+export const VERSION = {
   major: 0,
   minor: 1,
   subtitle: "",
 };
 
-export function setVersionText() {
-  var versionText = document.getElementById("version_text");
-  versionText.innerHTML = `WAG v${VERSION.major}.${VERSION.minor}${
-    VERSION.subtitle.length > 0 ? `_${VERSION.subtitle}` : ""
-  }`;
+export const VERSION_DATE = {
+  month: 9,
+  day: 13,
+  year: 2024,
+  modification: 0
 }
 
-// Thymine
+export function setVersionText(type = "version") {
+  var version = `${VERSION.major}.${VERSION.minor}${
+    VERSION.subtitle.length > 0 ? `_${VERSION.subtitle}` : ""
+  }`;
+
+  if (type == "date") version = `${VERSION_DATE.month}/${VERSION_DATE.day}/${VERSION_DATE.year}${(VERSION_DATE.modification.length > 0) ? `_${VERSION_DATE.modification}` : ''}`;
+  
+  var versionText = document.getElementById("version_text");
+  versionText.innerHTML = `WAG v${version}`;
+}
+
+// Thymine (unused)
 export var stringToColor = (string, saturation = 100, lightness = 75, alpha = 1) => {
   let hash = 0;
   for (let i = 0; i < string.length; i++) {
 hash = string.charCodeAt(i) + ((hash << 5) - hash);
 hash = hash & hash;
   }
-  return `hsla(${(hash % 360)}, ${saturation}%, ${lightness}%, ${alpha})`;
+  return `hsla(${(hash)}, ${saturation}%, ${lightness}%, ${alpha})`;
 }
 
 // gameplay
@@ -38,14 +49,14 @@ export var textNodes = [
       {
         text: "scream Hello",
         nextText: 2,
-        setState: { controlLV: 10 },
+        setState: { controlLV: 10 }
       },
       {
         text: "run",
         nextText: 3,
-        setState: { controlLV: 10 },
-      },
-    ],
+        setState: { controlLV: 10 }
+      }
+    ]
   },
   {
     id: 2,
@@ -103,8 +114,7 @@ export var textNodes = [
         text: "KeEp DoInG It.",
         nextText: 2.3,
         setState: { controlLV: 4 },
-        requiredState: { value: 'controlLV', expected_value: 5 },
-        button_modifier: { color: stringToColor(150, 100, 50), bordercolor: stringToColor(150, 100, 30, 1)}
+        requiredState: { value: 'controlLV', expected_value: 5 }
       },
       {
         text: "Pick up the stick, you know what to do with it.",
@@ -124,20 +134,20 @@ export var textNodes = [
         nextText: 2.3,
         setState: { controlLV: 3 },
         requiredState: { value: 'controlLV', expected_value: 4 },
-        button_modifier: { color: stringToColor(100, 100, 50), bordercolor: stringToColor(100, 100, 30, 1)}
+        color: 'red'
       },
       {
         text: "I WONT LET YOU STOP.",
         nextText: 2.3,
         setState: { controlLV: 2 },
         requiredState: { value: 'controlLV', expected_value: 3 },
-        button_modifier: { color: stringToColor(50, 100, 50), bordercolor: stringToColor(50, 100, 30, 1)}
+        color: 'red'
       },
       {
         text: "CONTINUE",
         nextText: 2.3,
         requiredState: { value: 'controlLV', expected_value: 2 },
-        button_modifier: { color: stringToColor(0, 100, 50), bordercolor: stringToColor(0, 100, 30, 1)}
+        color: 'red'
       }
     ]
   },
@@ -220,30 +230,3 @@ export var textNodes = [
     ]
   }
 ]
-
-
-/*
-{
-        text: "KEEP DOING IT.",
-        nextText: 2.2,
-        setState: { controlLV: 3 },
-        requiredState: { value: 'controlLV', expected_value: 4 }
-      },
-      {
-        text: "I WONT LET YOU STOP.",
-        nextText: 2.2,
-        setState: { controlLV: 2 },
-        requiredState: { value: 'controlLV', expected_value: 3 }
-      },
-      {
-        text: "CONTINUE",
-        nextText: 2.2,
-        setState: { controlLV: 1 },
-        requiredState: { value: 'controlLV', expected_value: 2 }
-      },
-      {
-        text: "DIE",
-        nextText: -1,
-        requiredState: { value: 'controlLV', expected_value: 1 }
-      }
-*/

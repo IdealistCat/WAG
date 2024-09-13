@@ -1,5 +1,5 @@
 import { showTextNode } from "./textnode.js";
 
-export function startGame() {
-    showTextNode(1);
+export function startGame(num = 1) {
+    showTextNode(num);
 }

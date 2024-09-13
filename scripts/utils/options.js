@@ -1,5 +1,6 @@
 import { startGame } from "./game.js";
 import { showTextNode } from "./textnode.js";
+import { setSave, getSave } from "./localstorage.js";
 
 export let state = {};
 
@@ -24,4 +25,5 @@ export function showOption(option, data = {value:1, expected_value:0}) {
     state = Object.assign(state, option.setState);
 
     showTextNode(nextTextNodeId);
+    setSave('startNode', textNodeIndex);
   }

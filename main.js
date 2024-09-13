@@ -1,6 +1,7 @@
 import { startGame } from "./scripts/utils/game.js";
 import { setVersionText } from "./scripts/constants.js";
-import {} from ""
+import { getAll, getSave } from "./scripts/utils/localstorage.js";
 
 setVersionText();
-startGame();
+// getAll();
+startGame(getSave('savecode'));

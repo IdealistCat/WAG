@@ -128,6 +128,7 @@ export var textNodes = [
         text: "Pick up the stick, you know what to do with it.",
         nextText: -1,
         setState: { controlLV: 4 },
+        color: 'red'
       }
     ]
   },
@@ -189,7 +190,7 @@ export var textNodes = [
   },
   {
     id: 5,
-    text: "You stumble to the floor after trying to run.",
+    text: "You accept your fate.",
     storyLength: 4,
     storyIndex: 4,
     options: [

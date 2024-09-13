@@ -9,6 +9,8 @@ export function showTextNode(textNodeIndex = 1) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  document.body.style = `background-image: url('./images/${(textNode.image == null) ? 'forest' : textNode.image}.png');`;
+
   textNode.options.forEach((option) => {
     if (showOption(option, option.requiredState)) {
       // document.body.style = `background-image: url(${(option.image.length > 0) ? "/"+option : ""});`;

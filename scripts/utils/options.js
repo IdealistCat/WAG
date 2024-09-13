@@ -3,15 +3,14 @@ import { showTextNode } from "./textnode.js";
 
 export let state = {};
 
-export function showOption(option, data = {value:1, expected_value:0}) {
+export function showOption(option, data = {value:'controlLV', expected_value:0}) {
   var value = '';
 
   switch (data.value) {
     case 'controlLV': value = state.controlLV;
-    case 'wentToCity': value = state.wentToCity;
   }
 
-    return option.requiredState == null || value == data.expected_value;
+    return option.requiredState == null || value == data.expected_value || option.hidden == false
   }
   
   export function selectOption(option) {

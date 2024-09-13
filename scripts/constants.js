@@ -76,7 +76,7 @@ export var textNodes = [
         text: "keep doing it!",
         nextText: 2.1,
         setState: { controlLV: 9 },
-        requiredState: { value: 'controlLV', expected_value: 10 }
+        hidden: false
       }
     ]
   },
@@ -89,8 +89,7 @@ export var textNodes = [
       {
         text: "keep doing it.",
         nextText: 2.2,
-        setState: { controlLV: 8 },
-        requiredState: { value: 'controlLV', expected_value: 9 }
+        setState: { controlLV: 8 }
       }
     ]
   },
@@ -99,6 +98,7 @@ export var textNodes = [
     text: "you scream hello once more, but you notice a stick, on the floor",
     storyLength: 4,
     storyIndex: 4,
+    image: 'stick',
     options: [
       {
         text: "Keep doing it.",

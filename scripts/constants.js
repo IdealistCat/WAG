@@ -75,8 +75,7 @@ export var textNodes = [
       {
         text: "keep doing it!",
         nextText: 2.1,
-        setState: { controlLV: 9 },
-        hidden: false
+        setState: { controlLV: 9 }
       }
     ]
   },

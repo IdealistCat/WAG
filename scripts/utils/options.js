@@ -10,7 +10,7 @@ export function showOption(option, data = {value:'controlLV', expected_value:0})
     case 'controlLV': value = state.controlLV;
   }
 
-    return option.requiredState == null || value == data.expected_value || option.hidden == false
+    return option.requiredState == null || value == data.expected_value;
   }
   
   export function selectOption(option) {

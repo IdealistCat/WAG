@@ -38,6 +38,7 @@ hash = hash & hash;
 // gameplay
 export var textElement = document.getElementsByClassName("text");
 export var optionButtonsElement = document.getElementById("option-buttons");
+export var savecodeElement = document.getElementById("saveinput");
 
 export var textNodes = [
   {

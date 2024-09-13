@@ -1,9 +1,7 @@
 import { selectOption, showOption } from "./options.js";
 import { textNodes, textElement, optionButtonsElement } from "../constants.js";
-import { setSave, getSave } from "./localstorage.js";
 
 export function showTextNode(textNodeIndex = 1) {
-  setSave("startNode", textNodeIndex);
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
   textElement[0].innerText = textNode.text;
 

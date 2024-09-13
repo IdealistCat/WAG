@@ -7,8 +7,8 @@ export function showOption(option, data = {value:1, expected_value:0}) {
   var value = '';
 
   switch (data.value) {
-    case 'controlLV':
-      value = state.controlLV;
+    case 'controlLV': value = state.controlLV;
+    case 'wentToCity': value = state.wentToCity;
   }
 
     return option.requiredState == null || value == data.expected_value;

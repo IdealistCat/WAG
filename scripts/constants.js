@@ -42,6 +42,13 @@ export var optionButtonsElement = document.getElementById("option-buttons");
 
 export var textNodes = [
   {
+    id: 0.1,
+    text: "TO BE CONTINUED, this has taken too long lol, sorry",
+    storyIndex: 6,
+    storyLength: 6,
+    options: []
+  },
+  {
     id: 1,
     text: "you wake up in unknown lands, you are in a seemingly endless forest, and have no clue of what previously happened.",
     storyLength: "a",
@@ -206,7 +213,9 @@ export var textNodes = [
       {
         text: "keep running, they won't understand.",
         nextText: -1,
-        setState: { controlLV: 9 }
+        setState: { controlLV: 9 },
+        color: '#f0f',
+        bordercolor: '#909'
       }
     ]
   },
@@ -218,15 +227,15 @@ export var textNodes = [
     options: [
       {
         text: "look at them",
-        nextText: 8
+        nextText: 0.1
       },
       {
         text: "ask for food",
-        nextText: 9
+        nextText: 0.1
       },
       {
-        text: "ask for food",
-        nextText: 10
+        text: "ask for shelter",
+        nextText: 0.1
       }
     ]
   }

@@ -41,7 +41,7 @@ export function showTextNode(textNodeIndex = 1) {
         // special
         if (option.color.startsWith("#"))
           button.style = `color: ${
-            option.textcolor != null ? option.textcolor : "#000"
+            option.textcolor != null ? option.textcolor : "#fff"
           }; background-color: ${option.color}; border-color: ${
             option.bordercolor != null ? option.bordercolor : "#000"
           };`;

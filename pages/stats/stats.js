@@ -3,7 +3,7 @@ import { state } from "../../scripts/utils/options.js";
 var data = [];
 data.push(`current path: ${localStorage.path}`);
 data.push(`current control level: ${(state.controlLV == undefined) ? 10 : state.controlLV}/10`);
-data.push(`resets: ${(localStorage.resets == undefined) ? 0 : localStorage.resets}`);
+data.push(`resets: ${(localStorage.resets == undefined || localStorage.resets == NaN) ? 0 : localStorage.resets}`);
 
 for (let index = 0; index < data.length; index++) {
     const element = data[index];

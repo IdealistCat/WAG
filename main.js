@@ -4,7 +4,11 @@ import { findPath, updatePath } from "./scripts/utils/path.js";
 
 document.getElementById('reset').onclick = function() {
     localStorage.path = 'Beginning';
-    localStorage.resets += 1;
+    
+    if (localStorage.resets == undefined || localStorage.resets == NaN) localStorage.resets = 0;
+    // localStorage.resets = 1;
+    localStorage.resets = parseInt(localStorage.resets) + 1;
+    
     location.pathname = '/index.html';
 };
 

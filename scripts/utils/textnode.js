@@ -1,6 +1,6 @@
 import { selectOption, showOption } from "./options.js";
 import { textNodes, textElement, optionButtonsElement } from "../constants.js";
-import {updatePath } from './path.js';
+import { updatePath, findPath } from './path.js';
 
 export function showTextNode(textNodeIndex = 1) {
   const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
@@ -10,6 +10,8 @@ export function showTextNode(textNodeIndex = 1) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  // document.getElementById('path').innerText = findPath('Screaming Insanity (part 3/4)');
+  updatePath(textNode.path);
   document.body.style = `background-image: url('./images/${(textNode.image == null) ? 'forest' : textNode.image}.png');`;
 
   textNode.options.forEach((option) => {
@@ -20,7 +22,7 @@ export function showTextNode(textNodeIndex = 1) {
       button.innerText = option.text;
       button.classList.add("btn");
 
-      updatePath(textNode.path);
+      // updatePath(textNode.path);
       button.addEventListener("click", () => selectOption(option));
 
       if (option.color != null) {

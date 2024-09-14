@@ -1,0 +1,1 @@
+export function updatePath(path) {document.getElementById('path').innerText = `Path: ${path}`;}

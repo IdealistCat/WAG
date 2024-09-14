@@ -20,7 +20,7 @@ export function showTextNode(textNodeIndex = 1) {
       button.innerText = option.text;
       button.classList.add("btn");
 
-      updatePath(textNode.updatePath);
+      updatePath(textNode.path);
       button.addEventListener("click", () => selectOption(option));
 
       if (option.color != null) {

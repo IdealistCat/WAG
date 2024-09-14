@@ -46,6 +46,7 @@ export var textNodes = [
     text: "TO BE CONTINUED, this has taken too long lol, sorry",
     storyIndex: 6,
     storyLength: 6,
+    path: 'Ending',
     options: []
   },
   {
@@ -53,6 +54,7 @@ export var textNodes = [
     text: "you wake up in unknown lands, you are in a seemingly endless forest, and have no clue of what previously happened.",
     storyLength: "a",
     storyIndex: 1,
+    path: 'Beginning',
     options: [
       {
         text: "scream Hello",
@@ -71,6 +73,7 @@ export var textNodes = [
     text: "you scream hello, just like in the movies, games, shows, and others, but no one answered.",
     storyLength: 2,
     storyIndex: 2,
+    path: 'Screaming Insanity (part 1/4)',
     options: [
       {
         text: "keep doing it!",
@@ -84,6 +87,7 @@ export var textNodes = [
     text: "you scream hello, again. Nothing happened.",
     storyLength: 4,
     storyIndex: 3,
+    path: 'Screaming Insanity (part 2/4)',
     options: [
       {
         text: "keep doing it.",
@@ -98,6 +102,7 @@ export var textNodes = [
     storyLength: 4,
     storyIndex: 4,
     image: 'stick',
+    path: 'Screaming Insanity (part 3/4)',
     options: [
       {
         text: "Keep doing it.",
@@ -136,6 +141,7 @@ export var textNodes = [
     text: "SCREAM",
     storyLength: Math.random() * 10000,
     storyIndex: Math.random() * 10000,
+    path: 'Screaming Insanity (part 4/4)',
     options: [
       {
         text: "SyO[ KEEP DOING IT.",
@@ -164,6 +170,7 @@ export var textNodes = [
     text: "You stumble to the floor after trying to run.",
     storyLength: 3,
     storyIndex: 2,
+    path: 'Runner',
     options: [
       {
         text: "run",
@@ -176,6 +183,7 @@ export var textNodes = [
     text: "You stumble to the floor after trying to run. again.",
     storyLength: 3,
     storyIndex: 4,
+    path: 'Runner',
     options: [
       {
         text: "stop trying",
@@ -192,6 +200,7 @@ export var textNodes = [
     text: "You accept your fate.",
     storyLength: 4,
     storyIndex: 4,
+    path: 'Runner Quitter',
     options: [
       {
         text: "RESET",
@@ -204,6 +213,7 @@ export var textNodes = [
     text: "You decided to continue running instead of accepting your fate. And instead of falling you have found civilization.",
     storyLength: 10,
     storyIndex: 4,
+    path: 'Persistant Runner',
     options: [
       {
         text: "Head towards the city",
@@ -224,6 +234,7 @@ export var textNodes = [
     text: "You headed towards the city, everyone was confused by your appearence as they have never seen others come from the forest, they seem to know you.",
     storyIndex: 5,
     storyLength: 10,
+    path: 'Civilization (part 1/5)',
     options: [
       {
         text: "look at them",

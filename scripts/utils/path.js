@@ -5,12 +5,12 @@ export function updatePath(path = 'Beginning') {
     document.getElementById('path').innerText = `Path: ${path}`;
 }
 
-export function findPath(path = 'Beginning') {
+export function findPath(stringpath = 'Beginning') {
     for (let index = 0; index < textNodes.length; index++) {
         const element = textNodes[index];
         
-        if (element.path == path)
-            return index;
+        if (element.path == stringpath)
+            return element.id;
     }
 
     return 1;

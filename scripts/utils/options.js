@@ -9,6 +9,7 @@ export function showOption(option, data = {value:'controlLV', expected_value:0})
   switch (data.value) {
     case 'controlLV': value = state.controlLV;
     case 'resets': value = localStorage.resets;
+    case 'creep': value = state.creep;
   }
 
     return option.requiredState == null || value == data.expected_value;

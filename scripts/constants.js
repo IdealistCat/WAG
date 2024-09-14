@@ -59,12 +59,12 @@ export var textNodes = [
       {
         text: "scream Hello",
         nextText: 2,
-        setState: { controlLV: 10 }
+        setState: { controlLV: 10, creep: 0 }
       },
       {
         text: "run",
         nextText: 3,
-        setState: { controlLV: 10 }
+        setState: { controlLV: 10, creep: 0 }
       }
     ]
   },
@@ -238,16 +238,111 @@ export var textNodes = [
     options: [
       {
         text: "look at them",
-        nextText: 0.1
+        nextText: 7.1
       },
       {
         text: "ask for food",
-        nextText: 0.1
+        nextText: 8
       },
       {
         text: "ask for shelter",
-        nextText: 0.1
+        nextText: 9
       }
     ]
+  },
+  {
+    id: 7.1,
+    text: "You stare at them. Nothing Happens.",
+    storyIndex: 5,
+    storyLength: 10,
+    path: 'Civilization (part 1/5)',
+    options: [
+      {
+        text: "keep looking at them",
+        nextText: 7.1,
+        setState: { creep: 1},
+        requiredState: {value: 'creep', expected_value: 0}
+
+      },{
+        text: "keep looking at them",
+        nextText: 7.1,
+        setState: { creep: 2},
+        requiredState: {value: 'creep', expected_value: 1}
+
+      },{
+        text: "you can stop now",
+        nextText: 7.1,
+        setState: { creep: 3},
+        requiredState: {value: 'creep', expected_value: 2}
+
+      },{
+        text: "dude...",
+        nextText: 7.1,
+        setState: { creep: 4},
+        requiredState: {value: 'creep', expected_value: 3}
+
+      },{
+        text: "this is getting weird, can you stop?",
+        nextText: 7.1,
+        setState: { creep: 5},
+        requiredState: {value: 'creep', expected_value: 4}
+
+      },{
+        text: "hm.",
+        nextText: 7.1,
+        setState: { creep: 6},
+        requiredState: {value: 'creep', expected_value: 5}
+
+      },{
+        text: "stare.",
+        nextText: 7.1,
+        setState: { creep: 7},
+        requiredState: {value: 'creep', expected_value: 6}
+
+      },{
+        text: "stare.",
+        nextText: 7.1,
+        setState: { creep: 8},
+        requiredState: {value: 'creep', expected_value: 7}
+
+      },{
+        text: "stare.",
+        nextText: 7.1,
+        setState: { creep: 9},
+        requiredState: {value: 'creep', expected_value: 8}
+
+      },{
+        text: "STARE.",
+        nextText: 7.2,
+        setState: { creep: 10},
+        requiredState: {value: 'creep', expected_value: 9},
+        color: 'red'
+      },
+      {
+        text: "ask for food",
+        nextText: 8,
+        setState: { bread: 16 }
+      },
+      {
+        text: "ask for shelter",
+        nextText: 9
+      }
+    ]
+  },
+  {
+    id: 7.2,
+    text: 'Im gonna stop you here. Force you to reset. Creep.',
+    storyIndex: 5,
+    storyLength: 5,
+    path: 'Creep',
+    image: 'black'
+  },
+  {
+    id: 8,
+    text: 'You asked them for food and they gave you a stack of bread',
+    storyIndex: 5,
+    storyLength: 5,
+    path: 'Creep',
+    image: 'black',
   }
 ]
